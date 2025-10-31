@@ -83,8 +83,8 @@ const AdminLogin = () => {
         <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
           <p className="text-xs text-gray-600">
             <strong>Default Credentials:</strong><br />
-            Email: admin@savings.com<br />
-            Password: Admin@123456
+            Email:dieudonne@code.com<br />
+            Password: Admin@test
           </p>
         </div>
       </div>

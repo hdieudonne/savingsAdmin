@@ -52,8 +52,8 @@ class AdminAuthService {
     if (!adminExists) {
       const admin = await Admin.create({
         fullName: 'System Administrator',
-        email: process.env.DEFAULT_ADMIN_EMAIL || 'admin@savings.com',
-        password: process.env.DEFAULT_ADMIN_PASSWORD || 'Admin@123456',
+        email: process.env.DEFAULT_ADMIN_EMAIL || 'dieudonne@code.com',
+        password: process.env.DEFAULT_ADMIN_PASSWORD || 'Admin@test',
         role: 'superadmin'
       });
       

@@ -51,7 +51,7 @@ const router = express.Router();
  */
 
 /* ================================
-   ✅ AUTHENTICATION ROUTES
+    AUTHENTICATION ROUTES
    ================================ */
 
 /**
@@ -92,7 +92,7 @@ router.post('/auth/login', adminController.login);
 router.get('/auth/profile', protectAdmin, adminController.getProfile);
 
 /* ================================
-   ✅ USER MANAGEMENT ROUTES
+    USER MANAGEMENT ROUTES
    ================================ */
 
 /**
@@ -150,7 +150,7 @@ router.get('/users/:userId', protectAdmin, adminController.getUserById);
 router.put('/users/:userId/toggle-status', protectAdmin, adminController.toggleUserStatus);
 
 /* ================================
-   ✅ DEVICE VERIFICATION ROUTES
+    DEVICE VERIFICATION ROUTES
    ================================ */
 
 /**
@@ -196,7 +196,7 @@ router.post('/devices/verify', protectAdmin, adminController.verifyDevice);
 router.post('/devices/revoke', protectAdmin, adminController.revokeDevice);
 
 /* ================================
-   ✅ DASHBOARD & ANALYTICS ROUTES
+    DASHBOARD & ANALYTICS ROUTES
    ================================ */
 
 /**
@@ -214,7 +214,7 @@ router.post('/devices/revoke', protectAdmin, adminController.revokeDevice);
 router.get('/dashboard/stats', protectAdmin, adminController.getDashboardStats);
 
 /* ================================
-   ✅ TRANSACTIONS ROUTES
+   TRANSACTIONS ROUTES
    ================================ */
 
 /**
@@ -232,7 +232,7 @@ router.get('/dashboard/stats', protectAdmin, adminController.getDashboardStats);
 router.get('/transactions', protectAdmin, adminController.getAllTransactions);
 
 /* ================================
-   ✅ HEALTH CHECK ROUTE
+    HEALTH CHECK ROUTE
    ================================ */
 
 /**

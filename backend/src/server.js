@@ -8,7 +8,7 @@ require('dotenv').config();
 const swaggerDocs = require("../swagger");
 
 const routes = require('../routes');
-const adminService = require('../services/adminAuthService'); // import your service
+const adminService = require('../services/adminAuthService');
 
 const app = express();
 swaggerDocs(app);
@@ -63,19 +63,19 @@ mongoose.connect(process.env.MONGODB_URI, {
   useUnifiedTopology: true
 })
 .then(async () => {
-  console.log('✅ MongoDB connected');
+  console.log(' MongoDB connected');
 
-  // ✅ Create default admin if it doesn't exist
+  // Create default admin if it doesn't exist
   await adminService.createDefaultAdmin();
 
   // Start server
   const PORT = process.env.PORT || 5000;
   app.listen(PORT, () => {
-    console.log(`🚀 Client API server running on port ${PORT}`);
-    console.log(`📍 Environment: ${process.env.NODE_ENV || 'development'}`);
+    console.log(` Client API server running on port ${PORT}`);
+    console.log(` Environment: ${process.env.NODE_ENV || 'development'}`);
   });
 })
-.catch(err => console.error('❌ MongoDB connection error:', err));
+.catch(err => console.error(' MongoDB connection error:', err));
 
 module.exports = app;
 
